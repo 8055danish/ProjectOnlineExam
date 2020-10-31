@@ -1,0 +1,46 @@
+DATABASE NAME : online_exam
+
+
+CREATE TABLE IF NOT EXISTS admin(
+email varchar(30) DEFAULT NULL,
+password varchar(20) DEFAULT NULL,
+);
+
+
+INSERT INTO admin(email, password) VALUES ('admin@gmail.com','admin');
+
+
+CREATE TABLE IF NOT EXISTS exam_subject(
+  sub_id int(5) NOT NULL AUTO_INCREMENT,
+  sub_name varchar(25) DEFAULT NULL,
+  PRIMARY KEY (sub_id)
+);
+
+CREATE TABLE IF NOT EXISTS exam_test(
+  test_id int(5) NOT NULL AUTO_INCREMENT,
+  sub_id int(5) DEFAULT NULL,
+  test_name varchar(30) DEFAULT NULL,
+  total_que varchar(15) DEFAULT NULL,
+  PRIMARY KEY (test_id)
+);
+
+CREATE TABLE IF NOT EXISTS exam_question(
+  que_id int(5) NOT NULL AUTO_INCREMENT,
+  test_id int(5) DEFAULT NULL,
+  que_desc varchar(150) DEFAULT NULL,
+  ans1 varchar(75) DEFAULT NULL,
+  ans2 varchar(75) DEFAULT NULL,
+  ans3 varchar(75) DEFAULT NULL,
+  ans4 varchar(75) DEFAULT NULL,
+  true_ans int(1) DEFAULT NULL,
+  PRIMARY KEY (que_id);
+
+CREATE TABLE IF NOT EXISTS user (
+user_id int(11) NOT NULL AUTO_INCREMENT,
+name varchar(50) DEFAULT NULL,
+username varchar(15) DEFAULT NULL,
+password varchar(20) DEFAULT NULL,
+email varchar(50) DEFAULT NULL,
+PRIMARY KEY (`user_id`)
+);
+

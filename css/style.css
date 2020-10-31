@@ -1,0 +1,48 @@
+body{
+  margin:0px;
+}
+.header{
+  height:100px;
+  text-align: center;
+  font-size: 50px;
+  background-color: cyan;
+}
+
+.menu{
+  overflow:hidden;
+  background-color: lightblue;
+}
+.menu ul{
+  margin:1;padding:0;list-style:none
+}
+.menu ul li{
+  display:block;float:left;
+}
+.menu ul li a {
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  display: block;
+  margin: 0px 6px 4px;
+  padding: 3px 10px 5px;
+  text-decoration: none;
+}
+.menu ul li a:hover{
+  border:1px solid blue;;color: blue;
+}
+
+form { 
+  margin: 0 auto; 
+  width:250px;
+}
+
+.button_class input{
+    margin-top: 5px;
+    padding: 4px 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#inline {
+  display: block;
+}
